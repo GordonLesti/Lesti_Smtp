@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lesti_Smtp>
+            <version>0.1.0</version>
+        </Lesti_Smtp>
+    </modules>
+    <global>
+        <helpers>
+            <smtp>
+                <class>Lesti_Smtp_Helper</class>
+            </smtp>
+        </helpers>
+        <models>
+            <smtp>
+                <class>Lesti_Smtp_Model</class>
+            </smtp>
+            <core>
+                <rewrite>
+                    <email_template>Lesti_Core_Model_Email_Template</email_template>
+                </rewrite>
+            </core>
+        </models>
+    </global>
+</config>
