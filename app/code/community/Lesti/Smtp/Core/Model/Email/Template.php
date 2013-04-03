@@ -6,7 +6,7 @@
  * Time: 19:47
  * To change this template use File | Settings | File Templates.
  */
-class Lesti_Core_Model_Email_Template extends Mage_Core_Model_Email_Template
+class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Template
 {
 
     const XML_PATH_LESTI_SMTP_ENABLE = 'system/lesti_smtp/enable';

@@ -17,7 +17,7 @@
             </smtp>
             <core>
                 <rewrite>
-                    <email_template>Lesti_Core_Model_Email_Template</email_template>
+                    <email_template>Lesti_Smtp_Core_Model_Email_Template</email_template>
                 </rewrite>
             </core>
         </models>
