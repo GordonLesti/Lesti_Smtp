@@ -64,10 +64,12 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
 
         if(Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_ENABLE)) {
             $authDetails = array('port' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_PORT),
-                'ssl' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL),
                 'auth' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_AUTH),
                 'username' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_USERNAME),
                 'password' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_PASSWORD));
+            if(Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL) != Lesti_Smtp_Model_System_Config_Source_Ssl::NO) {
+                $authDetails['ssl'] = Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL);
+            }
             $transport = new Zend_Mail_Transport_Smtp(Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_HOST),
                 $authDetails);
             Zend_Mail::setDefaultTransport($transport);

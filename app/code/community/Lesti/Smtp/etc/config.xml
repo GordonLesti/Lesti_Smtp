@@ -21,5 +21,15 @@
                 </rewrite>
             </core>
         </models>
+        <events>
+            <controller_front_init_before>
+                <observers>
+                    <smtp_controller_front_init_before>
+                        <class>lesti/observer</class>
+                        <method>controllerFrontInitBefore</method>
+                    </smtp_controller_front_init_before>
+                </observers>
+            </controller_front_init_before>
+        </events>
     </global>
 </config>
