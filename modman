@@ -1,0 +1,8 @@
+app/code/community/Lesti/Smtp/Core/Model/Email/Template.php app/code/community/Lesti/Smtp/Core/Model/Email/Template.php
+app/code/community/Lesti/Smtp/etc/config.xml app/code/community/Lesti/Smtp/etc/config.xml
+app/code/community/Lesti/Smtp/etc/system.xml app/code/community/Lesti/Smtp/etc/system.xml
+app/code/community/Lesti/Smtp/Helper/Data.php app/code/community/Lesti/Smtp/Helper/Data.php
+app/code/community/Lesti/Smtp/Model/Observer.php app/code/community/Lesti/Smtp/Model/Observer.php
+app/code/community/Lesti/Smtp/Model/System/Config/Source/Auth.php app/code/community/Lesti/Smtp/Model/System/Config/Source/Auth.php
+app/code/community/Lesti/Smtp/Model/System/Config/Source/Ssl.php app/code/community/Lesti/Smtp/Model/System/Config/Source/Ssl.php
+app/etc/modules/Lesti_Smtp.xml app/etc/modules/Lesti_Smtp.xml

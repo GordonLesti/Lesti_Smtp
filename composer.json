@@ -1,0 +1,8 @@
+{
+    "name": "GordonLesti/Lesti_Smtp",
+    "description": "Lesti Smtp",
+    "type": "magento-module",
+    "authors": [
+        {"name": "Gordon Lesti", "email": "info@gordonlesti.com"}
+    ]
+}
