@@ -25,7 +25,7 @@ Add `require` and `repositories` sections to your composer.json as shown in exam
 }
 ```
 
-Read more about [Magento Composer](https://github.com/kirchbergerknorr/magento/wiki)
+Read more about [Magento Composer](https://github.com/kirchbergerknorr/magento/wiki/) usage.
 
 Support
 -------
