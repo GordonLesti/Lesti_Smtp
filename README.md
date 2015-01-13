@@ -10,20 +10,22 @@ Add `require` and `repositories` sections to your composer.json as shown in exam
 
 ```
 {
-    ...
-    
+    "minimum-stability": "dev",
     "repositories": [
-        {"type": "git", "url": "https://github.com/GordonLesti/Lesti_Smtp"},
+        {"type": "composer", "url": "http://packages.firegento.com"},
+        {"type": "git", "url": "https://github.com/GordonLesti/Lesti_Smtp"}
     ],
-    
+
     "require": {
         "GordonLesti/Lesti_Smtp": "*"
     },
-    
-    ...
+    "extra": {
+        "magento-root-dir": "."
+    }
 }
 ```
 
+Read more about [Composer Magento](https://github.com/kirchbergerknorr/magento/wiki)
 
 Support
 -------
