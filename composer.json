@@ -4,5 +4,8 @@
     "type": "magento-module",
     "authors": [
         {"name": "Gordon Lesti", "email": "info@gordonlesti.com"}
-    ]
+    ],
+    "require": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
 }
