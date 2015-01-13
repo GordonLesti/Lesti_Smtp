@@ -5,9 +5,6 @@
     "authors": [
         {"name": "Gordon Lesti", "email": "info@gordonlesti.com"}
     ],
-    "repositories": [
-        {"type": "composer", "url": "http://packages.firegento.com"}
-    ],
     "require": {
         "magento-hackathon/magento-composer-installer": "*"
     }
