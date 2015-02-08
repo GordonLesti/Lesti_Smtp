@@ -1,0 +1,15 @@
+language: php
+
+sudo: false
+
+php:
+  - 5.3
+
+install:
+  - cp -f .travis/composer.json composer.json
+  - composer install --dev
+
+script:
+  - php vendor/bin/phpcs --standard=Zend -n app/
+  - php vendor/bin/phpmd app/ text codesize,design,unusedcode
+  - php vendor/bin/phpcpd app/

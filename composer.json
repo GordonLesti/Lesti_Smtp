@@ -1,9 +1,17 @@
 {
-    "name": "GordonLesti/Lesti_Smtp",
-    "description": "Lesti Smtp",
+    "name": "gordonlesti/lesti_smtp",
     "type": "magento-module",
+    "description": "Simple Smtp Transport for Magento",
+    "keywords": ["smtp"],
+    "homepage": "https://gordonlesti.com/projects/lestismtp/",
+    "license": "OSL-3.0",
     "authors": [
-        {"name": "Gordon Lesti", "email": "info@gordonlesti.com"}
+        {
+            "name": "Gordon Lesti",
+            "email": "info@gordonlesti.com",
+            "homepage": "http://gordonlesti.com/",
+            "role": "developer"
+        }
     ],
     "require": {
         "magento-hackathon/magento-composer-installer": "*"
