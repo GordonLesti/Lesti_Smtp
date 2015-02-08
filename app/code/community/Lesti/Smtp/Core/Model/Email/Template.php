@@ -1,14 +1,21 @@
 <?php
 /**
- * Created by JetBrains PhpStorm.
- * User: gordon
- * Date: 17.03.13
- * Time: 19:47
- * To change this template use File | Settings | File Templates.
+ * Lesti_Smtp (https://gordonlesti.com/projects/lestismtp/)
+ *
+ * PHP version 5
+ *
+ * @link      https://github.com/GordonLesti/Lesti_Smtp
+ * @package   Lesti_Smtp
+ * @author    Gordon Lesti <info@gordonlesti.com>
+ * @copyright Copyright (c) 2013-2015 Gordon Lesti (http://gordonlesti.com)
+ * @license   http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+
+/**
+ * Class Lesti_Smtp_Core_Model_Email_Template
  */
 class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Template
 {
-
     /**
      * Send mail to recipient
      *
@@ -54,14 +61,14 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
                 break;
         }
 
+        // BEGIN Lesti_Smtp Changes
         if(Mage::getStoreConfig(Lesti_Smtp_Helper_Data::XML_PATH_LESTI_SMTP_ENABLE)) {
             Mage::helper('smtp')->setSmtpAsDefaultTransport();
-        } else {
-            if ($returnPathEmail !== null) {
-                $mailTransport = new Zend_Mail_Transport_Sendmail("-f".$returnPathEmail);
-                Zend_Mail::setDefaultTransport($mailTransport);
-            }
+        } elseif ($returnPathEmail !== null) {
+            $mailTransport = new Zend_Mail_Transport_Sendmail("-f".$returnPathEmail);
+            Zend_Mail::setDefaultTransport($mailTransport);
         }
+        // END Lesti_Smtp Changes
 
         foreach ($emails as $key => $email) {
             $mail->addTo($email, '=?utf-8?B?' . base64_encode($names[$key]) . '?=');
@@ -91,5 +98,4 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
 
         return true;
     }
-
 }

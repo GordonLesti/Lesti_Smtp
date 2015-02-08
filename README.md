@@ -3,8 +3,8 @@ Lesti_Smtp
 
 Branch | Build Status
 --- | ---
-Master | [![Build Status](https://img.shields.io/travis/GordonLesti/Lesti_Fpc/master.svg?style=flat-square)](https://travis-ci.org/GordonLesti/Lesti_Fpc)
-Develop | [![Build Status](https://img.shields.io/travis/GordonLesti/Lesti_Fpc/develop.svg?style=flat-square)](https://travis-ci.org/GordonLesti/Lesti_Fpc)
+Master | [![Build Status](https://img.shields.io/travis/GordonLesti/Lesti_Smtp/master.svg?style=flat-square)](https://travis-ci.org/GordonLesti/Lesti_Smtp)
+Develop | [![Build Status](https://img.shields.io/travis/GordonLesti/Lesti_Smtp/develop.svg?style=flat-square)](https://travis-ci.org/GordonLesti/Lesti_Smtp)
 
 ## Release Information
 

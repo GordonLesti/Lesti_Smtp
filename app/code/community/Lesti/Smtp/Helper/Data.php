@@ -1,10 +1,18 @@
 <?php
 /**
- * Created by JetBrains PhpStorm.
- * User: gordon
- * Date: 17.03.13
- * Time: 20:37
- * To change this template use File | Settings | File Templates.
+ * Lesti_Smtp (https://gordonlesti.com/projects/lestismtp/)
+ *
+ * PHP version 5
+ *
+ * @link      https://github.com/GordonLesti/Lesti_Smtp
+ * @package   Lesti_Smtp
+ * @author    Gordon Lesti <info@gordonlesti.com>
+ * @copyright Copyright (c) 2013-2015 Gordon Lesti (http://gordonlesti.com)
+ * @license   http://opensource.org/licenses/OSL-3.0 Open Software License (OSL 3.0)
+ */
+
+/**
+ * Class Lesti_Smtp_Helper_Data
  */
 class Lesti_Smtp_Helper_Data extends Mage_Core_Helper_Data
 {
