@@ -16,11 +16,13 @@
  */
 class Lesti_Smtp_Model_System_Config_Source_Ssl
 {
-
     const NO = '';
     const TLS = 'tls';
     const SSL = 'ssl';
 
+    /**
+     * @return array
+     */
     public function toOptionArray()
     {
         return array(
@@ -29,5 +31,4 @@ class Lesti_Smtp_Model_System_Config_Source_Ssl
             array('value' => self::SSL, 'label'=>Mage::helper('smtp')->__('ssl'))
         );
     }
-
 }

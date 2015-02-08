@@ -16,12 +16,15 @@
  */
 class Lesti_Smtp_Model_Observer
 {
-
+    /**
+     * @param $observer
+     *
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     */
     public function controllerFrontInitBefore($observer)
     {
-        if(Mage::getStoreConfig(Lesti_Smtp_Helper_Data::XML_PATH_LESTI_SMTP_ENABLE)) {
+        if (Mage::getStoreConfig(Lesti_Smtp_Helper_Data::XML_PATH_LESTI_SMTP_ENABLE)) {
             Mage::helper('smtp')->setSmtpAsDefaultTransport();
         }
     }
-
 }

@@ -16,11 +16,13 @@
  */
 class Lesti_Smtp_Model_System_Config_Source_Auth
 {
-
     const CRAMMD5 = 'crammd5';
     const LOGIN = 'login';
     const PLAIN = 'plain';
 
+    /**
+     * @return array
+     */
     public function toOptionArray()
     {
         return array(
@@ -29,5 +31,4 @@ class Lesti_Smtp_Model_System_Config_Source_Auth
             array('value' => self::PLAIN, 'label'=>Mage::helper('smtp')->__('plain'))
         );
     }
-
 }

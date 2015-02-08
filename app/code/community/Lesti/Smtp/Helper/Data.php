@@ -30,11 +30,13 @@ class Lesti_Smtp_Helper_Data extends Mage_Core_Helper_Data
             'auth' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_AUTH),
             'username' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_USERNAME),
             'password' => Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_PASSWORD));
-        if(Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL) != Lesti_Smtp_Model_System_Config_Source_Ssl::NO) {
+        if (Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL) != Lesti_Smtp_Model_System_Config_Source_Ssl::NO) {
             $authDetails['ssl'] = Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_SSL);
         }
-        $transport = new Zend_Mail_Transport_Smtp(Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_HOST),
-            $authDetails);
+        $transport = new Zend_Mail_Transport_Smtp(
+            Mage::getStoreConfig(self::XML_PATH_LESTI_SMTP_HOST),
+            $authDetails
+        );
         Zend_Mail::setDefaultTransport($transport);
     }
 

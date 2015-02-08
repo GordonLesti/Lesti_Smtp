@@ -23,6 +23,9 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
      * @param   array|string|null  $name         receiver name(s)
      * @param   array              $variables    template variables
      * @return  boolean
+     *
+     * @SuppressWarnings(PHPMD.CyclomaticComplexity)
+     * @SuppressWarnings(PHPMD.NPathComplexity)
      **/
     public function send($email, $name = null, array $variables = array())
     {
@@ -62,7 +65,7 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
         }
 
         // BEGIN Lesti_Smtp Changes
-        if(Mage::getStoreConfig(Lesti_Smtp_Helper_Data::XML_PATH_LESTI_SMTP_ENABLE)) {
+        if (Mage::getStoreConfig(Lesti_Smtp_Helper_Data::XML_PATH_LESTI_SMTP_ENABLE)) {
             Mage::helper('smtp')->setSmtpAsDefaultTransport();
         } elseif ($returnPathEmail !== null) {
             $mailTransport = new Zend_Mail_Transport_Sendmail("-f".$returnPathEmail);
@@ -77,7 +80,7 @@ class Lesti_Smtp_Core_Model_Email_Template extends Mage_Core_Model_Email_Templat
         $this->setUseAbsoluteLinks(true);
         $text = $this->getProcessedTemplate($variables, true);
 
-        if($this->isPlain()) {
+        if ($this->isPlain()) {
             $mail->setBodyText($text);
         } else {
             $mail->setBodyHTML($text);
